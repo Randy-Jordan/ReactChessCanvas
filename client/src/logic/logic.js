@@ -7,9 +7,9 @@ export function move_logic(board,canvas,ctx,move){
     const bool = board.turn     
     board.setTurn = !bool
     
-    soundAnimation(toChar)
+    // soundAnimation(toChar)
 
-    if(fromChar === "P" && parseInt(move.to.rank) === 8 || fromChar === "p" && parseInt(move.to.rank) === 1){
+    if((fromChar === "P" && parseInt(move.to.rank) === 8) || (fromChar === "p" && parseInt(move.to.rank) === 1)){
         promotion_animation(board,canvas,ctx,move)
            
         
