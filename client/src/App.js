@@ -7,7 +7,7 @@ function App() {
   }
 
   return (
-    <Canvas id={'newCanvas'} draggable={true}onDrop={onDrop}/>
+    <Canvas id={'newCanvas'} draggable={true}onDrop={onDrop} width={540}/>
   );
 }
 
