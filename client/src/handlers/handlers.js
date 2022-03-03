@@ -6,11 +6,7 @@ export function dragstart_handler(board){
         const selectedSquare = board.returnSquareByCtx(ev.layerX,ev.layerY)
         const fromChar = board.squarePieceChar(selectedSquare.index,board.state)
 
-        if ((board.orientation === 'white' && !board.whitePieces.includes(fromChar)) || (board.orientation === 'black' && !board.blackPieces.includes(fromChar))){
-        ev.preventDefault()
-    }
-        
-    if((board.turn === true && !board.whitePieces.includes(fromChar)) || (board.turn === false && !board.blackPieces.includes(fromChar))){
+    if(!isPiece(fromChar)){
         ev.preventDefault()
         
     } else{
